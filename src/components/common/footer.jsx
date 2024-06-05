@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ContactInfo from "../common/ContactInfo";
+import ContactInfo from "./address-title_icons";
 import location_icon from "../../../public/Images/icons/location.svg";
 import phone_icon from "../../../public/Images/icons/phone.svg";
 import whatsapp_icon from "../../../public/Images/icons/whatsapp.svg";

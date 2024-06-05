@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentBox from '../common/ContentBox';
+import MainText from '../common/main_text';
 import img1 from '../../../public/Images/HomeImages/image1.svg';
 import img2 from '../../../public/Images/HomeImages/img2.svg';
 import img3 from '../../../public/Images/HomeImages/img3.svg';
@@ -7,16 +7,18 @@ import img5 from '../../../public/Images/HomeImages/img5.svg';
 import vector_icon from '../../../public/Images/HomeImages/vector.svg';
 import sliderImg1 from '../../../public/Images/sliderImages/img1.svg';
 import SubContentBox from '../common/SubContentBox';
-import ContactContent from '../common/ContactContent';
 import ContactForm from '../common/contact_form';
 import Slider from '../common/slider';
 
 import { sliderImg } from '../../../public/JsonData/SliderData';
+import ImageCont from '../common/image';
+import Addressess from '../common/addresses';
 
 const HomePage = () => {
+
   return (
     <div>
-      <ContentBox
+      <MainText
         title="Welcome To Beyond"
         subTitle="Helping You Move Through Life."
         link1="See Our Services >"
@@ -64,11 +66,19 @@ const HomePage = () => {
         bgColor="darkGolden"
         textColor="white"
       />
-      <ContactContent image={img5} column="Col" rowStyle="RowClass" />
-      <ContactContent image={img5} column="Col" rowStyle="RowReverse" />
-      <ContactContent image={img5} column="Col" rowStyle="RowClass" />
+      <div className='flex flex-col md:flex-row items-center'>
+        <Addressess />
+        <ImageCont image={img5} />
+      </div>
+      <div className='flex flex-col-reverse md:flex-row items-center '  >
+        <ImageCont image={img5} />
+        <Addressess />
+      </div>
+      <div className='flex flex-col md:flex-row items-center'>
+        <Addressess />
+        <ImageCont image={img5} />
+      </div>
       <ContactForm />
-
     </div>
   );
 };

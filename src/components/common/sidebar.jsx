@@ -2,7 +2,7 @@ import * as React from "react";
 import { useRef } from "react";
 import { motion, sync, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions.js";
-import { MenuToggle } from "./menu-toggle.jsx";
+import { MenuToggle } from "./menu_toggle.jsx";
 import { Navigation } from "./navigation.jsx";
 
 const sidebar = {

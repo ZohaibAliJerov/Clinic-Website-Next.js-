@@ -1,10 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
-const ContactInfo = (props) => {
+const AddressTitleIcons = (props) => {
   const colorStyle = {
-    dark: 'text-black',
-    ligth: 'text-white',
+    dark: "text-black",
+    ligth: "text-white",
   };
 
   return (
@@ -15,14 +15,16 @@ const ContactInfo = (props) => {
         </div>
         <div className="flex-col">
           <h3
-            className={`${colorStyle[props.customColor]
-              } || text-base font-bold `}
+            className={`${
+              colorStyle[props.customColor]
+            } || text-base font-bold `}
           >
             {props.title}
           </h3>
           <p
-            className={`${colorStyle[props.customColor]
-              } || text-[#757575] text-sm font-normal`}
+            className={`${
+              colorStyle[props.customColor]
+            } || text-[#757575] text-sm font-normal`}
           >
             {props.subTitle}
           </p>
@@ -32,4 +34,4 @@ const ContactInfo = (props) => {
   );
 };
 
-export default ContactInfo;
+export default AddressTitleIcons;
