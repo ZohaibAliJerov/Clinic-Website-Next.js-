@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import AddressTitleIcons from "./address-title_icons";
+import AddressTitleIcons from "./address_title_icons";
 import location_icon from "../../../public/Images/icons/location.svg";
 import phone_icon from "../../../public/Images/icons/phone.svg";
 import whatsapp_icon from "../../../public/Images/icons/whatsapp.svg";

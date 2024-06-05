@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ImageCont = (props) => {
   return (
-    <div className="w-[100%] md:w-[50%] py-4">
+    <div className="w-[100%] md:w-[50%]">
       <Image
         src={props.image}
         alt=""
