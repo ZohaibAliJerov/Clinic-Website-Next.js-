@@ -11,12 +11,18 @@ const variants = {
   },
 };
 
+const menuItems = [
+  { title: "Home", key: "home" },
+  { title: "About Us", key: "about-us" },
+  { title: "Contact Us", key: "contact-us" },
+  { title: "Our Team", key: "our-team" },
+  { title: "Our Services", key: "our-services" },
+];
+
 export const Navigation = () => (
   <motion.ul variants={variants} className="toogle-ul">
-    {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
+    {menuItems.map((item, i) => (
+      <MenuItem item={item} i={i} key={i} />
     ))}
   </motion.ul>
 );
-
-const itemIds = [0, 1, 2, 3, 4];

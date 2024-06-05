@@ -3,10 +3,10 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 
-const Images = () => {
+const Images = ({ src }) => {
   return (
     <StyledImageWrapper>
-      <StyledImage src="/svgs/bp.png" alt="bp" width={720} height={500} />
+      <StyledImage src={src} alt="bp" width={720} height={500} />
     </StyledImageWrapper>
   );
 };

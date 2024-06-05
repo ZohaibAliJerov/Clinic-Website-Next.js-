@@ -2,19 +2,26 @@
 import React from "react";
 import styled from "styled-components";
 
-const MainText = () => {
+const MainText = ({
+  heading1,
+  heading2,
+  services,
+  team,
+  contact,
+  smallHeading,
+}) => {
   return (
     <StyledTextWrapper className="flex flex-col items-end justify-center">
       <div className="w-90">
         <StyledHeadingWrapper>
-          <h1>Welcome To Beyond</h1>
-          <h1 className="heading2">Helping You Move Through Life.</h1>
+          {smallHeading ? <h4>{smallHeading}</h4> : <h1>{heading1}</h1>}
+          <h1 className="heading2">{heading2}</h1>
         </StyledHeadingWrapper>
         <div className="w-90 pt-10">
           <StyledUl>
-            <li>See Our Services </li>
-            <li>Meet The Team </li>
-            <li>Contact Us </li>
+            <li>{services} </li>
+            <li>{team} </li>
+            <li>{contact} </li>
           </StyledUl>
         </div>
       </div>
@@ -34,11 +41,11 @@ const StyledTextWrapper = styled.div`
 
 const StyledHeadingWrapper = styled.div`
   margin-top: 10rem;
+  width: 90%;
   @media only screen and (max-width: 767px) {
     margin-top: 2rem;
     width: 100%;
   }
-
   .heading2 {
     color: #444444;
   }
@@ -58,10 +65,13 @@ const StyledHeadingWrapper = styled.div`
       line-height: 3rem;
     }
   }
+  h4 {
+    font-size: 24px;
+  }
 `;
 
 const StyledUl = styled.ul`
-  font-size: 30px;
+  font-size: 24px;
   color: #757575;
   display: flex;
   flex-direction: column;

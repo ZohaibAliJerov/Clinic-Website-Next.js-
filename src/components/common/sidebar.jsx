@@ -2,8 +2,8 @@ import * as React from "react";
 import { useRef } from "react";
 import { motion, sync, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions.js";
-import { MenuToggle } from "./MenuToggle";
-import { Navigation } from "./Navigation";
+import { MenuToggle } from "./menu-toggle.jsx";
+import { Navigation } from "./navigation.jsx";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -15,7 +15,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(0px at 207px 62px)",
+    clipPath: "circle(0px at 260px 70px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -25,13 +25,14 @@ const sidebar = {
   },
 };
 
-export const Example = () => {
+export const Sidebar = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
   return (
     <motion.nav
+      className="framenav"
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
