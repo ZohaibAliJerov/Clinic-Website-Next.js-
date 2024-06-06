@@ -13,7 +13,7 @@ const ServicesBar = () => {
           Services
         </h3>
       </div>
-      <div className="px-10 py-4">
+      <div className="pr-10 py-4 ">
         <PiStethoscopeLight className="text-8xl" color="#5e5e3d" />
       </div>
     </div>

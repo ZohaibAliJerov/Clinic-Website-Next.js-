@@ -35,7 +35,10 @@ export default function Navbar() {
             <h1 className="text-20 text-[#5E5E3C] pl-5 font-semibold">LOGO</h1>
           </Link>
           <div className="flex w-170 justify-between">
-            <div className="button-wrapper" style={{ marginRight: "3rem" }}>
+            <div
+              className="button-wrapper hidden md:block"
+              style={{ marginRight: "3rem" }}
+            >
               <Button color="golden" btnText="Contact Us >" />
             </div>
 
