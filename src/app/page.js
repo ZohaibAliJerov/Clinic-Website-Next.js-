@@ -58,7 +58,7 @@ const HomePage = () => {
       <DividerText
         title="Contact Us"
         subTitle="Find Our Clinics Near You."
-        image={img2}
+        image={vector_icon}
         bgColor="darkGolden"
         textColor="white"
       />

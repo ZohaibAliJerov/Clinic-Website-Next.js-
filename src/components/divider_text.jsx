@@ -15,8 +15,11 @@ const SubContentBox = (props) => {
   };
 
   return (
-    <div className={`${baseClass} ${bgColors[props.bgColor]}`}>
-      <div className="flex items-center w-[100%] px-[24px] m-auto justify-between">
+    <div
+      className={`${baseClass} ${bgColors[props.bgColor]},`}
+      style={{ height: "auto" }}
+    >
+      <div className="flex flex-col sm:flex-row items-center w-[100%] px-[24px] m-auto justify-between py-4">
         <div className="flex flex-col justify-center md:w-1/2">
           <h1
             className={`${
@@ -36,7 +39,7 @@ const SubContentBox = (props) => {
             <Button color="golden" btnText="See Our Services" />
           </div>
         </div>
-        <div className="flex md:w-1/2 justify-end">
+        <div className="flex pt-3 sm:pt-0 md:w-1/2 justify-end">
           <Image src={props.image} alt="" width={180} height={180} />
         </div>
       </div>
