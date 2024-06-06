@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "./custom_button";
 
 const SubContentBox = (props) => {
@@ -36,7 +37,9 @@ const SubContentBox = (props) => {
             {props.subTitle}
           </h1>
           <div className=" mt-5">
-            <Button color="golden" btnText="See Our Services" />
+            <Link href="/services">
+              <Button color="golden" btnText="See Our Services" />
+            </Link>
           </div>
         </div>
         <div className="flex pt-3 sm:pt-0 md:w-1/2 justify-end">

@@ -25,18 +25,22 @@ const MainText = (props) => {
           <h1 className={`${sizes[props.textSize]} $colors[props.textColor]`}>
             {props.subTitle}
           </h1>
-          <div className="mt-10">
+          <div className="mt-10 w-[13rem]">
             <Link href="/services">
-              <p className="text-[20px] font-normal text-[#A08A7F] cursor-pointer hover:text-underline">
+              <p className="text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
                 {props.link1}
               </p>
             </Link>
-            <p className="text-[20px] font-normal text-[#A08A7F] cursor-pointer">
-              {props.link2}
-            </p>
-            <p className="text-[20px] font-normal text-[#A08A7F] cursor-pointer">
-              {props.link3}
-            </p>
+            <Link href="/team">
+              <p className="text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
+                {props.link2}
+              </p>
+            </Link>
+            <Link href="/contactus">
+              <p className="text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
+                {props.link3}
+              </p>
+            </Link>
           </div>
         </div>
         <div className="flex md:w-1/2">

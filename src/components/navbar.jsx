@@ -41,9 +41,8 @@ export default function Navbar() {
             >
               <Button color="golden" btnText="Contact Us >" />
             </div>
-
-            <Sidebar />
           </div>
+          <Sidebar />
         </div>
       </nav>
     </div>
