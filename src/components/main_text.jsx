@@ -1,17 +1,18 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-const ContentBox = (props) => {
+const MainText = (props) => {
   const sizes = {
     largeSizeText:
-      'text-[40px] font-normal sm:text-[40px] md:text-[30px] lg:text-[40px]',
+      "text-[40px] font-normal sm:text-[40px] md:text-[30px] lg:text-[40px]",
     smallSizeText:
-      'text-[24px] font-normal text-[16px] font-normal sm:text-[16px] md:text-[24px] lg:text-[24px]',
+      "text-[24px] font-normal text-[16px] font-normal sm:text-[16px] md:text-[24px] lg:text-[24px]",
   };
   const colors = {
-    white: 'text-white ',
-    black: 'text-black',
-    green: 'text-[#5E5E3C]',
+    white: "text-white ",
+    black: "text-black",
+    green: "text-[#5E5E3C]",
   };
 
   return (
@@ -25,9 +26,11 @@ const ContentBox = (props) => {
             {props.subTitle}
           </h1>
           <div className="mt-10">
-            <p className="text-[20px] font-normal text-[#A08A7F] cursor-pointer">
-              {props.link1}
-            </p>
+            <Link href="/services">
+              <p className="text-[20px] font-normal text-[#A08A7F] cursor-pointer hover:text-underline">
+                {props.link1}
+              </p>
+            </Link>
             <p className="text-[20px] font-normal text-[#A08A7F] cursor-pointer">
               {props.link2}
             </p>
@@ -44,4 +47,4 @@ const ContentBox = (props) => {
   );
 };
 
-export default ContentBox;
+export default MainText;

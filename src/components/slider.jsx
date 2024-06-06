@@ -1,7 +1,7 @@
-'use client';
-import {useState, useEffect} from 'react';
-import Image from 'next/image';
-import {sliderImg} from '../../../public/JsonData/SliderData';
+"use client";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { sliderImg } from "../../public/JsonData/SliderData";
 
 const SliderRow = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -31,13 +31,13 @@ const SliderRow = (props) => {
   };
 
   const sizes = {
-    largeSizeText: 'text-[40px] font-normal',
-    smallSizeText: 'text-[24px] font-normal',
+    largeSizeText: "text-[40px] font-normal",
+    smallSizeText: "text-[24px] font-normal",
   };
   const colors = {
-    white: 'text-white',
-    black: 'text-black',
-    green: 'text-[#5E5E3C]',
+    white: "text-white",
+    black: "text-black",
+    green: "text-[#5E5E3C]",
   };
 
   return (
@@ -67,7 +67,7 @@ const SliderRow = (props) => {
                 <div
                   key={index}
                   className={` absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                    index === activeIndex ? 'opacity-100' : 'opacity-0'
+                    index === activeIndex ? "opacity-100" : "opacity-0"
                   }`}
                   data-carousel-item
                 >
