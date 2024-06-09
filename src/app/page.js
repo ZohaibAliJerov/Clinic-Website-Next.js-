@@ -42,9 +42,9 @@ const HomePage = () => {
       <DividerText
         title="Our Team Help You"
         subTitle="Move Through Life."
-        image={img2}
-        bgColor="lightGolden"
-        textColor="grey"
+        image={vector_icon}
+        bgColor="darkGolden"
+        textColor="white"
       />
 
       <Slider

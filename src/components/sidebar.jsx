@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useRef } from "react";
-import { motion, sync, useCycle } from "framer-motion";
+import { motion } from "framer-motion";
 import { useDimensions } from "./use-dimensions.js";
 import { MenuToggle } from "./menu_toggle.jsx";
 import { Navigation } from "./navigation.jsx";
@@ -25,8 +25,8 @@ const sidebar = {
   },
 };
 
-export const Sidebar = () => {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+export const Sidebar = ({ toggleOpen, isOpenToggle }) => {
+  // const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
@@ -34,13 +34,13 @@ export const Sidebar = () => {
     <motion.nav
       className="framenav"
       initial={false}
-      animate={isOpen ? "open" : "closed"}
+      animate={isOpenToggle ? "open" : "closed"}
       custom={height}
       ref={containerRef}
     >
       <motion.div className="background" variants={sidebar} />
       <Navigation />
-      <MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} />
+      <MenuToggle isOpenToggle={isOpenToggle} toggle={() => toggleOpen()} />
     </motion.nav>
   );
 };

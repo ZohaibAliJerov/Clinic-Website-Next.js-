@@ -1,4 +1,5 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import logo from "../../public/Images/logo.svg";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -6,9 +7,22 @@ import { FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 import Button from "./custom_button";
 import { Sidebar } from "@/components/sidebar";
+import { motion, sync, useCycle } from "framer-motion";
+
 import Link from "next/link";
 
 export default function Navbar() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isOpen, toggleOpen] = useCycle(false, true);
+
+  const handleSidebarToggle = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  useEffect(() => {
+    console.log(isSidebarOpen);
+  }, [isSidebarOpen]);
+
   return (
     <div>
       <div className="flex justify-between px-[24px] bg-[#ECDFCC] ">
@@ -37,12 +51,20 @@ export default function Navbar() {
           <div className="flex w-170 justify-between">
             <div
               className="button-wrapper hidden md:block"
-              style={{ marginRight: "3rem" }}
+              style={{
+                zIndex: isOpen ? 0 : 2,
+                marginRight: "3rem",
+              }}
             >
               <Button color="golden" btnText="Contact Us >" />
             </div>
           </div>
-          <Sidebar />
+          <Sidebar
+            isOpen={isSidebarOpen}
+            onClose={handleSidebarToggle}
+            toggleOpen={toggleOpen}
+            isOpenToggle={isOpen}
+          />
         </div>
       </nav>
     </div>

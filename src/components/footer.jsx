@@ -14,17 +14,17 @@ const Footer = () => {
   return (
     <footer className="bg-[#5E5E3C] py-10">
       <div className="grid grid-cols-1 pl-10 md:grid-cols-3 gap-8">
-        <div className="flex flex-col space-y-4 text-center md:text-left">
-          <div className="text-2xl font-bold text-white">Clinic Name</div>
-          <p className="w-[50%] mx-auto md:w-[100%] text-sm text-gray-300">
+        <div className="flex flex-col space-y-4">
+          <h2 className="text-2xl font-bold text-white">Clinic Name</h2>
+          <p className="w-[50%] md:w-[100%] text-sm text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
             ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <div className="flex flex-col space-y-4 items-center md:items-left">
-          <div className="text-2xl font-bold text-white flex">Contact Us</div>
+        <div className="flex flex-col space-y-4">
+          <div className="text-2xl font-bold text-white  ">Contact Us</div>
           <ContactInfo
             image={location_icon}
             title="Location: "
@@ -50,8 +50,10 @@ const Footer = () => {
             customColor="ligth"
           />
         </div>
-        <div className="flex flex-col space-y-4 items-center md:items-left">
-          <div className="text-2xl font-bold text-white">Explore Us</div>
+        <div className="flex flex-col space-y-4">
+          <div className="text-2xl font-bold text-white items-start">
+            Explore Us
+          </div>
           <div className="flex flex-col space-y-4">
             <a href="#" className="text-sm text-gray-300 hover:text-white">
               Our Team
