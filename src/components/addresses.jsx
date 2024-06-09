@@ -1,24 +1,55 @@
+"use client";
 import React from "react";
 import AddressTitleIcons from "./address_title_icons";
 import location_icon from "../../public/Images/icons/location.svg";
 import phone_icon from "../../public/Images/icons/phone.svg";
 import whatsapp_icon from "../../public/Images/icons/whatsapp.svg";
-
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const Addressess = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  React.useEffect(() => {
+    if (inView) {
+      controls.start({ y: 0, opacity: 1 });
+    }
+  }, [controls, inView]);
+
   return (
     <div className="flex flex-col w:[100%] align-center justify-center md:w-[50%] py-4">
       <div className="w-[90%] px-8">
         <div className="">
-          <h1 className="text-[40px] font-bold sm:text-[24px] md:text-[20px] lg:text-[40px]">
+          <motion.h1
+            ref={ref}
+            initial={{ opacity: 0, y: 100 }}
+            animate={controls}
+            transition={{ duration: 1 }}
+            className="text-[40px] font-bold sm:text-[24px] md:text-[20px] lg:text-[40px]"
+          >
             Branch Name
-          </h1>
-          <p className="text-[24px] font-normal sm:text-[12px] md:text-[12px] lg:text-[24px]">
+          </motion.h1>
+          <motion.p
+            ref={ref}
+            initial={{ opacity: 0, y: 100 }}
+            animate={controls}
+            transition={{ duration: 1 }}
+            className="text-[24px] font-normal sm:text-[12px] md:text-[12px] lg:text-[24px]"
+          >
             Lorem ipsum dolor sit amet consectetur. Amet rhoncus neque facilisi
             adipiscing tincidunt. Euismodrisus nunc vulputate ultricies ac
             turpis.
-          </p>
+          </motion.p>
         </div>
-        <div className="mt-5">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 100 }}
+          animate={controls}
+          transition={{ duration: 1 }}
+          className="mt-5"
+        >
           <AddressTitleIcons
             image={location_icon}
             title="Location: "
@@ -34,7 +65,7 @@ const Addressess = () => {
             title="Whatsapp: "
             subTitle="+923 123446098"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -1,7 +1,11 @@
 "use client";
+import React from "react";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { sliderImg } from "../../public/JsonData/SliderData";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const SliderRow = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -39,16 +43,38 @@ const SliderRow = (props) => {
     black: "text-black",
     green: "text-[#5E5E3C]",
   };
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  React.useEffect(() => {
+    if (inView) {
+      controls.start({ y: 0, opacity: 1 });
+    }
+  }, [controls, inView]);
 
   return (
     <div className=" flex justify-end">
       <div className="flex flex-col md:flex-row w-[100%] ">
         <div className="flex flex-col justify-center md:w-1/2 pl-[24px] my-10 sm:mr-10 sm:my-10 md:mr-10">
-          <h1 className={`${sizes[props.textSize]} $colors[props.textColor]`}>
+          <motion.h1
+            ref={ref}
+            initial={{ opacity: 0, y: 100 }}
+            animate={controls}
+            transition={{ duration: 1 }}
+            className={`${sizes[props.textSize]} $colors[props.textColor]`}
+          >
             {props.title}
-          </h1>
+          </motion.h1>
           <h1 className="text-[40px] font-normal">{props.subTitle}</h1>
-          <div className="mt-10 ">
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 100 }}
+            animate={controls}
+            transition={{ duration: 1 }}
+            className="mt-10 "
+          >
             <p className="text-[20px] font-normal text-[#A08A7F] cursor-pointer">
               {props.link1}
             </p>
@@ -58,9 +84,15 @@ const SliderRow = (props) => {
             <p className="text-[20px] font-normal text-[#A08A7F] cursor-pointer">
               {props.link3}
             </p>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex md:w-1/2 w-auto h-[500px] sm:h-[500px] md:h-[400px] lg:h-[600px]">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 100 }}
+          animate={controls}
+          transition={{ duration: 1 }}
+          className="flex md:w-1/2 w-auto h-[500px] sm:h-[500px] md:h-[400px] lg:h-[600px]"
+        >
           <div className="relative w-full h-full" data-carousel="slide">
             <div>
               {sliderImg.map((slide, index) => (
@@ -132,7 +164,7 @@ const SliderRow = (props) => {
               </span>
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

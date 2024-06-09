@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const MainText = (props) => {
   const sizes = {
@@ -19,13 +21,37 @@ const MainText = (props) => {
     <div className=" flex justify-end">
       <div className="flex flex-col md:flex-row h-full w-[100%] ">
         <div className="flex flex-col justify-center md:w-1/2 pl-[24px] my-10 mr-10 sm:my-10">
-          <h1 className={`${sizes[props.textSize]} $colors[props.textColor]`}>
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1.5,
+              ease: [0.6, -0.05, 0.01, 0.99],
+            }}
+            className={`${sizes[props.textSize]} ${colors[props.textColor]}`}
+          >
             {props.title}
-          </h1>
-          <h1 className={`${sizes[props.textSize]} $colors[props.textColor]`}>
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1.5,
+              ease: [0.6, -0.05, 0.01, 0.99],
+            }}
+            className={`${sizes[props.textSize]} $colors[props.textColor]`}
+          >
             {props.subTitle}
-          </h1>
-          <div className="mt-10 w-[13rem]">
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.6, -0.05, 0.01, 0.99],
+            }}
+            className="mt-10 w-[13rem]"
+          >
             <Link href="/services">
               <p className="text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
                 {props.link1}
@@ -41,11 +67,19 @@ const MainText = (props) => {
                 {props.link3}
               </p>
             </Link>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex md:w-1/2">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            ease: [0.6, -0.05, 0.01, 0.99],
+          }}
+          className="flex md:w-1/2"
+        >
           <Image src={props.image} alt="" className="w-full h-auto" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
