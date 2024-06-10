@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 pl-10 md:grid-cols-3 gap-8">
         <div className="flex flex-col space-y-4">
           <h2 className="text-2xl font-bold text-white">Clinic Name</h2>
-          <p className="w-[50%] md:w-[100%] text-sm text-white">
+          <p className="w-[100%] text-sm text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
             ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
