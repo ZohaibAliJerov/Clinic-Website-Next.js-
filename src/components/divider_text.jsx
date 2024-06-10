@@ -32,8 +32,8 @@ const SubContentBox = (props) => {
       className={`${baseClass} ${bgColors[props.bgColor]},`}
       style={{ height: "auto" }}
     >
-      <div className="flex flex-col sm:flex-row items-center w-[100%] px-[24px] m-auto justify-between py-4 h-[332px]">
-        <div className="flex flex-col justify-center md:w-1/2">
+      <div className="flex flex-col justify-center sm:flex-row  items-center w-[100%] px-[24px] m-auto md:justify-between py-4 h-[332px]">
+        <div className="flex flex-col text-center lg:text-start w-[100%] lg:w-1/2">
           <motion.h1
             ref={ref}
             initial={{ opacity: 0, x: -100 }}
@@ -67,7 +67,7 @@ const SubContentBox = (props) => {
           initial={{ opacity: 0, x: 100 }}
           animate={controls}
           transition={{ duration: 1 }}
-          className="flex pt-3 sm:pt-0 md:w-1/2 justify-end pr-8"
+          className="hidden lg:flex pt-3 sm:pt-0 md:w-1/2 justify-end pr-8"
         >
           <Image src={props.image} alt="" width={159} height={163} />
         </motion.div>
