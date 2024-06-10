@@ -14,7 +14,6 @@ import Link from "next/link";
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isOpen, toggleOpen] = useCycle(false, true);
-
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
