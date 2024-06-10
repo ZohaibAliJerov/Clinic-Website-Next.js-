@@ -20,14 +20,14 @@ const Addressess = () => {
 
   return (
     <div className="flex flex-col w:[100%] align-center justify-center md:w-[50%] py-4">
-      <div className="w-[90%] px-8">
-        <div className="">
+      <div className="w-[100%] px-6 md:px-8">
+        <div className="w-[100%]">
           <motion.h1
             ref={ref}
             initial={{ opacity: 0, y: 100 }}
             animate={controls}
             transition={{ duration: 1 }}
-            className="text-[40px] font-bold sm:text-[24px] md:text-[20px] lg:text-[40px]"
+            className="font-bold text-[20px] md:text-[30px] lg:text-[40px]"
           >
             Branch Name
           </motion.h1>
@@ -36,7 +36,7 @@ const Addressess = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={controls}
             transition={{ duration: 1 }}
-            className="text-[24px] font-normal sm:text-[12px] md:text-[12px] lg:text-[24px]"
+            className="font-normal md:text-[12px] lg:text-[24px]"
           >
             Lorem ipsum dolor sit amet consectetur. Amet rhoncus neque facilisi
             adipiscing tincidunt. Euismodrisus nunc vulputate ultricies ac
