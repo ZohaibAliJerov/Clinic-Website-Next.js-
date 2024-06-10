@@ -13,16 +13,26 @@ const variants = {
 
 const menuItems = [
   { title: "Home", key: "home" },
-  { title: "About Us", key: "about-us" },
-  { title: "Contact Us", key: "contact-us" },
-  { title: "Our Team", key: "our-team" },
-  { title: "Our Services", key: "our-services" },
+  { title: "About Us", key: "about" },
+  { title: "Contact Us", key: "contact" },
+  { title: "Our Team", key: "team" },
+  { title: "Our Services", key: "services" },
 ];
 
-export const Navigation = () => (
-  <motion.ul variants={variants} className="toogle-ul">
-    {menuItems.map((item, i) => (
-      <MenuItem item={item} i={i} key={i} />
-    ))}
-  </motion.ul>
-);
+export const Navigation = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: "smooth" });
+  };
+  return (
+    <motion.ul variants={variants} className="toogle-ul">
+      {menuItems.map((item, i) => (
+        <MenuItem
+          item={item}
+          key={i}
+          onClick={() => scrollToSection(item.key)}
+        />
+      ))}
+    </motion.ul>
+  );
+};

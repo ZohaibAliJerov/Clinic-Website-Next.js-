@@ -57,7 +57,9 @@ export default function Navbar() {
                 marginRight: "3rem",
               }}
             >
-              <Button color="golden" btnText="Contact Us >" />
+              <Link href="/#contact">
+                <Button color="golden" btnText="Contact Us >" />
+              </Link>
             </div>
           </div>
           <Sidebar

@@ -54,17 +54,17 @@ const MainText = (props) => {
             className="my-8 md:my-10 w-[13rem]"
           >
             <Link href="/services">
-              <p className="text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
+              <p className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
                 {props.link1}
               </p>
             </Link>
             <Link href="/team">
-              <p className="text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
+              <p className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
                 {props.link2}
               </p>
             </Link>
             <Link href="/contactus">
-              <p className="text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
+              <p className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
                 {props.link3}
               </p>
             </Link>

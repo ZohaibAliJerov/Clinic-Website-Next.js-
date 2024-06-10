@@ -5,7 +5,9 @@
 
 /* /////////////////////////////////// */
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 .framenav {
   position: absolute;

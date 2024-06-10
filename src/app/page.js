@@ -14,23 +14,29 @@ import Addressess from "../components/addresses";
 const HomePage = () => {
   return (
     <div>
-      <MainText
-        title="Welcome To Beyond"
-        subTitle="Helping You Move Through Life."
-        link1="See Our Services >"
-        link2="Meet The Team >"
-        link3="Contact Us >"
-        image={img1}
-        textSize="largeSizeText"
-        textColor="black"
-      />
-      <DividerText
-        title="Our Services Help You"
-        subTitle="Move Through Life."
-        image={vector_icon}
-        bgColor="darkGolden"
-        textColor="white"
-      />
+      <div id="home">
+        <MainText
+          title="Welcome To Beyond"
+          subTitle="Helping You Move Through Life."
+          link1="See Our Services >"
+          link2="Meet The Team >"
+          link3="Contact Us >"
+          image={img1}
+          textSize="largeSizeText"
+          textColor="black"
+        />
+      </div>
+
+      <div id="services">
+        <DividerText
+          title="Our Services Help You"
+          subTitle="Move Through Life."
+          image={vector_icon}
+          bgColor="darkGolden"
+          textColor="white"
+        />
+      </div>
+
       <Slider
         title="At Beyond we believe in a patient focused care model, by offering a range of services under the one roof and a team approach we want to help you ‘Move Through Life’."
         link2="See All Of Our Services >"
@@ -39,13 +45,15 @@ const HomePage = () => {
         sliderImages={sliderImg}
       />
 
-      <DividerText
-        title="Our Team Help You"
-        subTitle="Move Through Life."
-        image={vector_icon}
-        bgColor="darkGolden"
-        textColor="white"
-      />
+      <div id="team">
+        <DividerText
+          title="Our Team Help You"
+          subTitle="Move Through Life."
+          image={vector_icon}
+          bgColor="darkGolden"
+          textColor="white"
+        />
+      </div>
 
       <Slider
         title="Lorem ipsum dolor sit amet consectetur. Amet vel
@@ -55,14 +63,17 @@ const HomePage = () => {
         textSize="smallSizeText"
         textColor="black"
       />
-      <DividerText
-        title="Contact Us"
-        subTitle="Find Our Clinics Near You."
-        image={vector_icon}
-        bgColor="darkGolden"
-        textColor="white"
-      />
-      <div className="flex flex-col md:flex-row items-center">
+      <div id="contact">
+        <DividerText
+          title="Contact Us"
+          subTitle="Find Our Clinics Near You."
+          image={vector_icon}
+          bgColor="darkGolden"
+          textColor="white"
+        />
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center" id="about">
         <Addressess />
         <ImageCont image={img5} />
       </div>
