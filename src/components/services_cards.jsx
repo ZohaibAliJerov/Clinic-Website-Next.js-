@@ -106,13 +106,13 @@ const StyledCard = styled(Card)`
 const StyledButton = styled(Button)`
   width: 10rem;
   height: 3rem;
-  border: 2px solid #003366;
+  border: 2px solid #5e5e3c;
   color: #003366;
   background-color: transparent;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s;
   &:hover {
-    background-color: #003366;
+    background-color: #5e5e3c;
     color: #ffffff;
   }
 `;
@@ -133,7 +133,7 @@ const StyledLoadMoreButton = styled(Button)`
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s;
   &:hover {
-    background-color: #003366;
+    background-color: #5e5e3c;
     color: #ffffff;
   }
 `;
