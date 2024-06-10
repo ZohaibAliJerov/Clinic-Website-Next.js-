@@ -52,6 +52,8 @@ export default function Navbar() {
               className="button-wrapper hidden md:block"
               style={{
                 zIndex: isOpen ? 0 : 2,
+                transitionDelay: isOpen ? "0s" : "1s",
+                transitionDuration: isOpen ? "0s" : "1s",
                 marginRight: "3rem",
               }}
             >
