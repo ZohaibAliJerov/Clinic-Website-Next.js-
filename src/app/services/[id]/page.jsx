@@ -16,9 +16,12 @@ const ServicesPage = ({ params }) => {
           className="flex flex-wrap justify-center"
           style={{ width: "100%" }}
         >
-          <div className="text-sec w-[50%] md:w-1/2 pl-10 flex justify-center">
-            <div className="flex flex-col justify-center pr-10">
-              <StyledH1 className="font-semibold py-4">
+          <div className="text-sec w-[50%] md:w-1/2 px-2 lg:px-10 flex justify-center">
+            <div className="flex flex-col justify-center">
+              <StyledH1
+                className="font-semibold py-4 text-[20px] lg:text-[30px]"
+                style={{ width: "100%" }}
+              >
                 Comprehensive Physiotherapy Services in Melbourne
               </StyledH1>
               <StyledUl>
@@ -90,9 +93,8 @@ const StyledSpan = styled.span`
 `;
 
 const StyledH1 = styled.h1`
-  font-size: 36px;
   @media (max-width: 768px) {
-    font-size: 20px;
+    font-size: 25px;
     img {
       width: 100%;
       margin: 0 auto;
