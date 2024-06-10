@@ -41,7 +41,7 @@ const SubContentBox = (props) => {
             transition={{ duration: 1 }}
             className={`${
               textColors[props.textColor]
-            } || text-[20px] font-normal sm:text-[20px] md:text-[40px]`}
+            } || text-[30px] md:text-[40px]`}
           >
             {props.title}
           </motion.h1>
@@ -52,7 +52,7 @@ const SubContentBox = (props) => {
             transition={{ duration: 1 }}
             className={`${
               textColors[props.textColor]
-            } || text-[20px] sm:text-[20px] md:text-[40px] font-normal`}
+            } || text-[30px] md:text-[40px] font-normal`}
           >
             {props.subTitle}
           </motion.h1>
