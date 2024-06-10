@@ -1,5 +1,5 @@
-import React from 'react';
-import Button from './custom_button';
+import React from "react";
+import Button from "./custom_button";
 
 const ContactForm = () => {
   return (
@@ -7,7 +7,7 @@ const ContactForm = () => {
       <h1 className="text-[40px] font-normal flex justify-center">
         Send an Inquiry
       </h1>
-      <form className="w-full  px-20  py-[40px]">
+      <form className="py-[40px] w-[90%] mx-auto">
         <div className="flex flex-col sm:flex-row  justify-between gap-[10px] sm:gap-[40px]">
           <div className="w-full">
             <label htmlFor="Name">

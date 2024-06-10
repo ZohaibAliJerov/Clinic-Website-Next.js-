@@ -5,12 +5,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const MainText = (props) => {
-  const sizes = {
-    largeSizeText:
-      "text-[40px] font-normal sm:text-[40px] md:text-[30px] lg:text-[40px]",
-    smallSizeText:
-      "text-[24px] font-normal text-[16px] font-normal sm:text-[16px] md:text-[24px] lg:text-[24px]",
-  };
+  // const sizes = {
+  // largeSizeText: "text[35px] lg:text-[40px]",
+  // smallSizeText:
+  // "text-[24px] font-normal text-[16px] font-normal sm:text-[16px] md:text-[24px] lg:text-[24px]",
+  // };
   const colors = {
     white: "text-white ",
     black: "text-black",
@@ -20,7 +19,7 @@ const MainText = (props) => {
   return (
     <div className=" flex justify-end">
       <div className="flex flex-col md:flex-row h-full w-[100%] ">
-        <div className="flex flex-col justify-center md:w-1/2 pl-[24px] my-10 mr-10 sm:my-10">
+        <div className="flex flex-col justify-center md:w-1/2 pl-[24px] mt-8 md:my-10 mr-10 text-[20px] sm:text-[30px] lg:text-[40px]">
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -28,7 +27,8 @@ const MainText = (props) => {
               duration: 1.5,
               ease: [0.6, -0.05, 0.01, 0.99],
             }}
-            className={`${sizes[props.textSize]} ${colors[props.textColor]}`}
+            // className={`${sizes[props.textSize]} ${colors[props.textColor]}`}
+            className={`${colors[props.textColor]}`}
           >
             {props.title}
           </motion.h1>
@@ -39,7 +39,8 @@ const MainText = (props) => {
               duration: 1.5,
               ease: [0.6, -0.05, 0.01, 0.99],
             }}
-            className={`${sizes[props.textSize]} $colors[props.textColor]`}
+            // className={`${sizes[props.textSize]} $colors[props.textColor]`}
+            className={`$colors[props.textColor]`}
           >
             {props.subTitle}
           </motion.h1>
@@ -50,7 +51,7 @@ const MainText = (props) => {
               duration: 0.8,
               ease: [0.6, -0.05, 0.01, 0.99],
             }}
-            className="mt-10 w-[13rem]"
+            className="my-8 md:my-10 w-[13rem]"
           >
             <Link href="/services">
               <p className="text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
