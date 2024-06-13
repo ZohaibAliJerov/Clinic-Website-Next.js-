@@ -44,6 +44,9 @@ export const Sidebar = ({ toggleOpen, isOpenToggle }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [containerRef, toggleOpen]);
+  const closeSidebar = () => {
+    toggleOpen();
+  };
 
   return (
     <motion.nav
@@ -54,7 +57,7 @@ export const Sidebar = ({ toggleOpen, isOpenToggle }) => {
       ref={containerRef}
     >
       <motion.div className="background" variants={sidebar} />
-      <Navigation />
+      <Navigation closeSidebar={closeSidebar} />
       <MenuToggle isOpenToggle={isOpenToggle} toggle={() => toggleOpen()} />
     </motion.nav>
   );

@@ -19,10 +19,11 @@ const menuItems = [
   { title: "Our Services", key: "services" },
 ];
 
-export const Navigation = () => {
+export const Navigation = ({ closeSidebar }) => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     element.scrollIntoView({ behavior: "smooth" });
+    closeSidebar();
   };
   return (
     <motion.ul variants={variants} className="toogle-ul">
