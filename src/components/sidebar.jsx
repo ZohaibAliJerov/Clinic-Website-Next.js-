@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useDimensions } from "./use-dimensions.js";
 import { MenuToggle } from "./menu_toggle.jsx";
@@ -26,9 +26,24 @@ const sidebar = {
 };
 
 export const Sidebar = ({ toggleOpen, isOpenToggle }) => {
-  // const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
+        toggleOpen();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [containerRef, toggleOpen]);
 
   return (
     <motion.nav
