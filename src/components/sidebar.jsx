@@ -33,7 +33,8 @@ export const Sidebar = ({ toggleOpen, isOpenToggle }) => {
     const handleClickOutside = (event) => {
       if (
         containerRef.current &&
-        !containerRef.current.contains(event.target)
+        !containerRef.current.contains(event.target) &&
+        isOpenToggle
       ) {
         toggleOpen();
       }
@@ -43,7 +44,7 @@ export const Sidebar = ({ toggleOpen, isOpenToggle }) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [containerRef, toggleOpen]);
+  }, [containerRef, isOpenToggle, toggleOpen]);
   const closeSidebar = () => {
     toggleOpen();
   };
@@ -58,7 +59,7 @@ export const Sidebar = ({ toggleOpen, isOpenToggle }) => {
     >
       <motion.div className="background" variants={sidebar} />
       <Navigation closeSidebar={closeSidebar} />
-      <MenuToggle isOpenToggle={isOpenToggle} toggle={() => toggleOpen()} />
+      <MenuToggle isOpenToggle={isOpenToggle} toggle={toggleOpen} />
     </motion.nav>
   );
 };

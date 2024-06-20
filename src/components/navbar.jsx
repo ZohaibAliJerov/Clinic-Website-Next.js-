@@ -66,7 +66,7 @@ export default function Navbar() {
           </div>
           <Sidebar
             isOpen={isSidebarOpen}
-            onClose={handleSidebarToggle}
+            onClose={() => setIsSidebarOpen(false)}
             toggleOpen={toggleOpen}
             isOpenToggle={isOpen}
           />
