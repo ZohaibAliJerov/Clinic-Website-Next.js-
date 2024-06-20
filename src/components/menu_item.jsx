@@ -29,7 +29,7 @@ export const MenuItem = ({ item, i, onClick }) => {
       >
         <div
           className="text-placeholder flex items-center justify-center font-bold"
-          style={{ border: "2px solid #5e5e3d", height: "40px" }}
+          style={{ border: "2px solid #363630", height: "40px" }}
         >
           {item.title}
         </div>

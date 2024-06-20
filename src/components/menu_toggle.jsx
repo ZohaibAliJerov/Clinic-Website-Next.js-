@@ -5,7 +5,7 @@ const Path = (props) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke="#5e5e3d"
+    stroke="#363630"
     strokeLinecap="round"
     {...props}
   />
