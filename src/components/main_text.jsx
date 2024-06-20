@@ -15,6 +15,14 @@ const MainText = (props) => {
     black: "text-black",
     green: "text-[#5E5E3C]",
   };
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.warn(`Element with id ${id} not found.`);
+    }
+  };
 
   return (
     <div className=" flex justify-end">
@@ -27,7 +35,6 @@ const MainText = (props) => {
               duration: 1.5,
               ease: [0.6, -0.05, 0.01, 0.99],
             }}
-            // className={`${sizes[props.textSize]} ${colors[props.textColor]}`}
             className={`${colors[props.textColor]}`}
           >
             {props.title}
@@ -58,16 +65,20 @@ const MainText = (props) => {
                 {props.link1}
               </p>
             </Link>
-            <Link href="/team">
-              <p className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
-                {props.link2}
-              </p>
-            </Link>
-            <Link href="/contactus">
-              <p className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
-                {props.link3}
-              </p>
-            </Link>
+
+            <p
+              className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C] cursor-pointer"
+              onClick={() => scrollToSection("team")}
+            >
+              {props.link2}
+            </p>
+
+            <p
+              className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C] cursor-pointer"
+              onClick={() => scrollToSection("contact")}
+            >
+              {props.link3}
+            </p>
           </motion.div>
         </div>
         <motion.div
