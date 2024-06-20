@@ -12,27 +12,22 @@ const variants = {
 };
 
 const menuItems = [
-  { title: "Home", key: "home" },
-  { title: "About Us", key: "about" },
-  { title: "Contact Us", key: "contact" },
-  { title: "Our Team", key: "team" },
-  { title: "Our Services", key: "services" },
+  { title: "Home", key: "home", href: "/#home" },
+  { title: "About Us", key: "about", href: "/#about" },
+  { title: "Contact Us", key: "contact", href: "/#contact" },
+  { title: "Our Team", key: "team", href: "/#team" },
+  { title: "Our Services", key: "services", href: "/#services" },
 ];
 
 export const Navigation = ({ closeSidebar }) => {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: "smooth" });
+  const handleClick = (href) => {
     closeSidebar();
+    window.location.href = href;
   };
   return (
     <motion.ul variants={variants} className="toogle-ul">
       {menuItems.map((item, i) => (
-        <MenuItem
-          item={item}
-          key={i}
-          onClick={() => scrollToSection(item.key)}
-        />
+        <MenuItem item={item} key={i} onClick={() => handleClick(item.href)} />
       ))}
     </motion.ul>
   );
