@@ -49,17 +49,20 @@ const Addressess = () => {
           animate={controls}
           transition={{ duration: 1 }}
           className="mt-5"
+          style={{ width: "60%" }}
         >
           <AddressTitleIcons
             image={location_icon}
             title="Location: "
             subTitle="4517 Washington Ave. Manchester, Kentucky 39495"
           />
+
           <AddressTitleIcons
             image={phone_icon}
             title="Phone: "
             subTitle="(432) 123446098"
           />
+
           <AddressTitleIcons
             image={whatsapp_icon}
             title="Whatsapp: "

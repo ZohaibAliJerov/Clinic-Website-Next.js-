@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ContactInfo from "./address_title_icons";
+import AddressTitleIcons from "./address_title_icons";
 import location_icon from "../../public/Images/icons/location.svg";
 import phone_icon from "../../public/Images/icons/phone.svg";
 import whatsapp_icon from "../../public/Images/icons/whatsapp.svg";
@@ -25,25 +25,25 @@ const Footer = () => {
         </div>
         <div className="flex flex-col space-y-4">
           <div className="text-2xl font-bold text-white  ">Contact Us</div>
-          <ContactInfo
+          <AddressTitleIcons
             image={location_icon}
             title="Location: "
             subTitle="4517 Washington Ave. Manchester, Kentucky 39495"
             customColor="ligth"
           />
-          <ContactInfo
+          <AddressTitleIcons
             image={phone_icon}
             title="Phone: "
             subTitle="(432) 123446098"
             customColor="ligth"
           />
-          <ContactInfo
+          <AddressTitleIcons
             image={whatsapp_icon}
             title="Whatsapp: "
             subTitle="+923 123446098"
             customColor="ligth"
           />
-          <ContactInfo
+          <AddressTitleIcons
             image={email_icon}
             title="Email: "
             subTitle="clinicsmail44@gmail.com"
@@ -64,19 +64,19 @@ const Footer = () => {
           </div>
           <div className="flex space-x-10 text-white pt-10">
             <FaTwitter
-              className=" border border-white rounded p-1"
+              className=" border border-white rounded p-1 cursor-pointer"
               style={{ fontSize: "30px" }}
             />
             <FaFacebookF
-              className="border border-white rounded p-1"
+              className="border border-white rounded p-1 cursor-pointer"
               style={{ fontSize: "30px" }}
             />
             <FaLinkedinIn
-              className="border border-white rounded p-1"
+              className="border border-white rounded p-1 cursor-pointer"
               style={{ fontSize: "30px" }}
             />
             <FaInstagram
-              className="border border-white rounded p-1"
+              className="border border-white rounded p-1 cursor-pointer"
               style={{ fontSize: "30px" }}
             />
           </div>
