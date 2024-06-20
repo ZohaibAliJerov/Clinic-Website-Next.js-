@@ -36,7 +36,9 @@ export default function Navbar() {
             <FaLinkedin />
           </span>
         </div>
-        <div>+60123397028</div>
+        <div className="italic" style={{ fontWeight: "300" }}>
+          +60123397028
+        </div>
       </div>
       <nav className="border-gray-200 border-b-2 px-[24px] p-3 ">
         <div className="flex flex-wrap items-center justify-between ">
