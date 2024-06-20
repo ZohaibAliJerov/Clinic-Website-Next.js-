@@ -100,19 +100,19 @@ const StyledHeading = styled.h2`
 `;
 
 const StyledCard = styled(Card)`
-  background-color: #ecdbbd;
+  background-color: #ececec;
 `;
 
 const StyledButton = styled(Button)`
   width: 10rem;
   height: 3rem;
-  border: 2px solid #5e5e3c;
-  color: #003366;
+  border: 2px solid #2a2d36;
+  color: #2a2d36;
   background-color: transparent;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s;
   &:hover {
-    background-color: #5e5e3c;
+    background-color: #2a2d36;
     color: #ffffff;
   }
 `;
@@ -128,12 +128,13 @@ const ServicesGrid = styled.div`
 const StyledLoadMoreButton = styled(Button)`
   width: 200px;
   height: 50px;
-  background-color: #ecdbbd;
-  color: #003366;
+  background-color: transparent;
+  color: #2a2d36;
   font-weight: 600;
+  border: 2px solid #2a2d36;
   transition: background-color 0.3s, color 0.3s;
   &:hover {
-    background-color: #5e5e3c;
+    background-color: #2a2d36;
     color: #ffffff;
   }
 `;

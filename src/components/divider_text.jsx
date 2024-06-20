@@ -9,7 +9,7 @@ import { useInView } from "react-intersection-observer";
 const DividerText = (props) => {
   const baseClass = "flex h-[320px]";
   const bgColors = {
-    darkGolden: "bg-[#5E5E3C] ",
+    darkGolden: "bg-[#2A2D36] ",
     lightGolden: "bg-[#ECDFCC]",
   };
   const textColors = {

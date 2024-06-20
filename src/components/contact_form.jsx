@@ -3,7 +3,7 @@ import Button from "./custom_button";
 
 const ContactForm = () => {
   return (
-    <div className="w-[100%]  bg-[#ECDFCC] py-[80px]">
+    <div className="w-[100%]  bg-[#ECECEC] py-[80px]">
       <h1 className="text-[40px] font-normal flex justify-center">
         Send an Inquiry
       </h1>

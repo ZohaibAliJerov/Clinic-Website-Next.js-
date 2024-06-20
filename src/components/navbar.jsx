@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import logo from "../../public/Images/logo.svg";
+import logo from "../../public/svgs/logodark.svg";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className="flex justify-between px-[24px] bg-[#ECDFCC] ">
+      <div className="flex justify-between px-[24px] bg-[#ECECEC] ">
         <div className="flex justify-between items-center">
           <span className="pl-3">
             <FaInstagram />
@@ -47,7 +47,7 @@ export default function Navbar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image src={logo} width={68} height={68} alt="logo error" />
-            <h1 className="text-20 text-[#5E5E3C] pl-5 font-semibold">LOGO</h1>
+            <h1 className="text-20 text-[#2A2D36] pl-5 font-semibold">LOGO</h1>
           </Link>
           <div className="flex w-170 justify-between">
             <div

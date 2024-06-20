@@ -46,7 +46,6 @@ const MainText = (props) => {
               duration: 1.5,
               ease: [0.6, -0.05, 0.01, 0.99],
             }}
-            // className={`${sizes[props.textSize]} $colors[props.textColor]`}
             className={`$colors[props.textColor]`}
           >
             {props.subTitle}
@@ -61,20 +60,20 @@ const MainText = (props) => {
             className="my-8 md:my-10 w-[13rem]"
           >
             <Link href="/services">
-              <p className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C]">
+              <p className="text-[15px] md:text-[20px] font-normal text-[#757575] hover:text-[#363630]">
                 {props.link1}
               </p>
             </Link>
 
             <p
-              className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C] cursor-pointer"
+              className="text-[15px] md:text-[20px] font-normal text-[#757575] hover:text-[#363630] cursor-pointer"
               onClick={() => scrollToSection("team")}
             >
               {props.link2}
             </p>
 
             <p
-              className="text-[15px] md:text-[20px] font-normal text-[#A08A7F] hover:text-[#5E5E3C] cursor-pointer"
+              className="text-[15px] md:text-[20px] font-normal text-[#757575] hover:text-[#363630] cursor-pointer"
               onClick={() => scrollToSection("contact")}
             >
               {props.link3}

@@ -12,7 +12,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#5E5E3C] py-10">
+    <footer className="bg-[#2A2D36] py-10">
       <div className="grid grid-cols-1 pl-10 md:grid-cols-3 gap-8">
         <div className="flex flex-col space-y-4">
           <h2 className="text-2xl font-bold text-white">Clinic Name</h2>
