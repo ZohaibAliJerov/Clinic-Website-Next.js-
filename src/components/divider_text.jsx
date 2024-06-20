@@ -6,7 +6,7 @@ import Button from "./custom_button";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const SubContentBox = (props) => {
+const DividerText = (props) => {
   const baseClass = "flex h-[320px]";
   const bgColors = {
     darkGolden: "bg-[#5E5E3C] ",
@@ -86,7 +86,7 @@ const SubContentBox = (props) => {
           </motion.h1>
           <div className=" mt-5">
             <Link href="/services">
-              <Button color="golden" btnText="See Our Services" />
+              <Button color="golden" btnText={props.btnText} />
             </Link>
           </div>
         </div>
@@ -104,4 +104,4 @@ const SubContentBox = (props) => {
   );
 };
 
-export default SubContentBox;
+export default DividerText;

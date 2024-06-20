@@ -34,6 +34,7 @@ const HomePage = () => {
           image={vector_icon}
           bgColor="darkGolden"
           textColor="white"
+          btnText="See Our Services"
         />
       </div>
 
@@ -52,6 +53,7 @@ const HomePage = () => {
           image={vector_icon}
           bgColor="darkGolden"
           textColor="white"
+          btnText="Meet Our Team"
         />
       </div>
 
@@ -70,6 +72,7 @@ const HomePage = () => {
           image={vector_icon}
           bgColor="darkGolden"
           textColor="white"
+          btnText="Contact Us"
         />
       </div>
 
